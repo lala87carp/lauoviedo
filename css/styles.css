@@ -1,0 +1,528 @@
+/*estilos generales*/
+/*Colores*/
+:root {
+    --negro: #181a1a;
+    --crema: #f8f8f4;
+    --turquesa: #21a0a0;
+    --mostaza: #f7c120;
+
+/*Fuentes*/
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-acento: 'Playfair Display', serif;
+}
+
+/*imagenes*/
+img {
+    max-width: 100%; /* No permite que la imagen desborde el contenedor */
+    display: block;  /* Quita el espacio extra que el navegador pone debajo de las fotos */
+    height: auto;    /* Mantiene la proporción para que no se vea estirada */
+}
+
+/*Body*/
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--crema);
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+/*Header*/
+.main-header {
+    background-color: var(--crema);
+    border-bottom: #181a1a 1px solid;
+    box-shadow: 0 6px 6px -2px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    height: 70px;
+}
+
+.nav-logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo a img{
+    max-height: 30px;
+    padding-right: 10px;
+}
+
+.nav-hamburger {
+    font-size: 1.5rem;
+    color: var(--negro);
+    cursor: pointer;
+}
+
+.fa-solid {
+    color: #181a1a;
+}
+
+/* Escondemos los links por defecto en mobile */
+.nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--crema);
+    display: none; /* Se mostrará al clickear */
+    flex-direction: column;
+    padding: 2rem 0;
+    text-align: center;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 1rem 0;
+}
+
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Acción de mostrar menú cuando el checkbox está activo */
+#nav-check:checked ~ .nav-links {
+    display: flex;
+}
+
+/* Estilo para el botón de contacto */
+.btn-contacto {
+    background-color: var(--mostaza);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    color: var(--negro) !important;
+    font-weight: 700 !important;
+}
+
+/*HERO SECTION*/
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    min-height: 100vh;
+    padding: 0 4%;
+    background-image: url('../images/fondo-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: auto;
+    padding: 80px 10%;
+    border-bottom: #181a1a 1px solid;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Hero Section - Estilos de Texto */
+.hero-title {
+    font-family: var(--fuente-principal); /* Montserrat Bold */
+    font-size: 2.5rem;
+    color: var(--negro);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-family: var(--fuente-principal); /* Montserrat */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--negro);
+    max-width: 500px;
+}
+
+.hero-description span {
+    display: block; 
+    margin-top: 15px;
+    font-family: var(--fuente-acento); /* Playfair Display */
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--negro);
+}
+
+/* Hero Section - Botón de Acción */
+.btn-hero {
+    display: inline-block;
+    background-color: var(--mostaza);
+    color: var(--negro);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    border-radius: 0px;
+    transition: transform 0.3s ease;
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px); 
+}
+
+/* Imagen del Lápiz */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-pencil {
+    max-width: 30%;
+    height: auto;
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid {
+    column-count: 2;
+    column-gap: 15px; 
+    padding: 15px;
+}
+
+.project-card {
+    display: inline-block; 
+    width: 100%;
+    margin-bottom: 25px; 
+    background-color: white;
+    overflow: hidden;
+    break-inside: avoid;
+    border-radius: 0;
+}
+
+.project-img-container img {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--crema);
+}
+
+.project-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease; 
+}
+
+.project-card:hover .project-img-container img {
+    transform: scale(1.05); 
+}
+
+.project-name {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.1;
+    color: var(--negro);
+}
+
+.project-tag {
+    font-family: var(--fuente-acento);
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--negro);
+    margin-top: 4px;
+    display: block;
+}
+
+.project-info {
+    padding: 10px 0; 
+}
+
+.portfolio-header{
+    margin-left: 15px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.portfolio-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.portfolio-header-top a{
+    margin-right: 15px;
+    text-decoration: none;
+    font-family: var(--fuente-acento);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--negro);
+}
+
+.grid-fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; 
+    background: linear-gradient(to bottom, rgba(248, 248, 244, 0), rgba(248, 248, 244, 1));
+    z-index: 10;
+    pointer-events: none;
+}
+
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+    z-index: 5;
+}
+
+.btn-load-more {
+    background-color: var(--crema);
+    border: 1px solid var(--negro);
+    padding: 15px 40px;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+    background-color: var(--negro);
+    color: var(--crema);
+}
+
+.portfolio-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    max-height: 900px;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+}
+
+.portfolio-wrapper.expanded {
+    max-height: 5000px;
+}
+
+/*Contacto*/
+
+.contacto {
+    background-color: var(--crema);
+    padding: 80px 0;
+}
+
+.contacto-container {
+    padding: 0 15px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-header {
+    margin-bottom: 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contacto-body {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.contacto-mail {
+    font-family: var(--fuente-acento); /* Playfair Display */
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--negro);
+    text-decoration: none;
+    border-bottom: 1px solid var(--negro);
+    margin-top: 10px;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: var(--mostaza);
+    padding: 15px 30px;
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--fuente-principal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.contacto-social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.contacto-social a {
+    text-decoration: none; 
+    color: var(--negro);
+    font-family: var(--fuente-principal);
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contacto-social a:hover {
+    color: var(--negro);
+    transform: scale(1.1); 
+}
+
+/*-------->  MediaQueries para el formato web  <--------*/
+
+@media (min-width: 800px) {
+    /* para esconder el icono de hamburguesa */
+    .nav-hamburger {
+        display: none;
+    }
+
+    /* lista en barra horizontal en el nav */
+    .nav-links {
+        position: static; 
+        display: flex;
+        flex-direction: row; 
+        padding: 0;
+        width: auto;
+        background-color: transparent;
+        gap: 30px; 
+        align-items: center;
+    }
+
+    .nav-links li {
+        padding: 0;
+    }
+
+    /* cuando el mouse pasa por sobre la lista */
+    .nav-links a:hover {
+        color: var(--turquesa); 
+        transition: color 0.3s ease;
+    }
+
+    /* boton de contacto */
+    .btn-contacto:hover {
+        background-color: var(--negro); 
+        color: var(--crema) !important;
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+    }
+
+    /*hero*/
+    .hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        padding: 60px 10%;
+    }
+
+    /*hero texto*/
+    .hero-title {
+        font-size: 4.5rem; 
+        line-height: 1.1;
+        margin-bottom: 25px;
+    }
+
+    .hero-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        text-align: left;
+    }
+
+    .hero-description {
+        font-size: 1.4rem;
+        max-width: 550px;
+        margin-bottom: 30px;
+    }
+
+    /*hero imagen*/
+    .hero-visual {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*hero boton proyectos*/
+    .btn-hero {
+        align-self: flex-start;
+        padding: 18px 40px;
+        font-size: 1.1rem;
+    }
+
+    /*proyectos*/
+    .portfolio-grid {
+        column-count: 3 ; 
+        column-gap: 30px;
+    }
+
+    /*Contacto*/
+    .contacto-body {
+        flex-direction: row; /* Se ponen uno al lado del otro */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .contacto-col {
+        flex: 1; /* Reparte el espacio equitativamente */
+    }
+}
+
+/*Correccion hero entre 800 y 1200 px*/
+
+@media (min-width: 800px) and ( max-width: 1200px){
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-pencil {
+        max-width: 450px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1201px){
+    .hero-pencil {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 60px;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+    }
+
+    }
