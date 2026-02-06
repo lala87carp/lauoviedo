@@ -396,6 +396,10 @@ body {
     transform: scale(1.1); 
 }
 
+.icono-contacto {
+    max-width: 30%;
+}
+
 /*-------->  MediaQueries para el formato web  <--------*/
 
 @media (min-width: 800px) {
@@ -491,6 +495,18 @@ body {
     
     .contacto-col {
         flex: 1; /* Reparte el espacio equitativamente */
+    }
+
+    .contacto-social{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .icono-contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
