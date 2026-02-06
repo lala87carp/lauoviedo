@@ -400,6 +400,56 @@ body {
     max-width: 30%;
 }
 
+/*------------FOOTER---------------*/
+.main-footer {
+    background-color: var(--negro);
+    padding: 60px 0 30px;
+    border-top: 1px solid var(--turquesa);
+    text-align: center;
+}
+
+.footer-container {
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-name {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: block;
+    color: var(--crema);
+}
+
+.footer-role {
+    font-family: var(--fuente-principal);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.footer-phrase {
+    font-family: var(--fuente-acento); /* Playfair Display */
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--crema);
+    margin: 25px auto;
+    max-width: 450px;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--fuente-principal);
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
 /*-------->  MediaQueries para el formato web  <--------*/
 
 @media (min-width: 800px) {
@@ -539,6 +589,12 @@ body {
         align-items: center;
         text-align: left;
         width: 100%;
+    }
+
+    /*FOOTER*/
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     }
