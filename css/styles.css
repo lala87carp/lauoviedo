@@ -473,9 +473,9 @@ body {
     font-family: var(--fuente-principal);
 }
 
-.project-info a {
-    text-decoration: none;
-    color: inherit; 
+.project-card a {
+    text-decoration: none !important;
+    color: inherit;
     display: block;
 }
 
@@ -490,6 +490,10 @@ body {
     font-family: var(--fuente-principal);
     font-style: normal;
     text-decoration: none;
+}
+
+.project-name, .project-tag {
+    text-decoration: none !important;
 }
 
 /* Filtros */
