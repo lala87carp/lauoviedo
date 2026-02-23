@@ -321,6 +321,13 @@ body {
     max-height: 5000px;
 }
 
+.proyecto-tagline{
+    font-family: var(--fuente-acento);
+    font-weight: 700;
+    color: var(--turquesa);
+    font-size: 1.3rem;
+}
+
 /*Contacto*/
 
 .contacto {
